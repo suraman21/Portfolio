@@ -1,48 +1,52 @@
 <?php
 declare(strict_types=1);
 $site = $site ?? get_site_settings();
-$nm = trim((string)($site['name'] ?? 'Portfolio'));
-$parts = preg_split('/\s+/', $nm);
-$ini = strtoupper(substr($parts[0] ?? 'P', 0, 1) . substr($parts[1] ?? ($parts[0] ?? 'P'), 0, 1));
 ?>
-      <footer class="neon-footer" id="siteFooter">
-        <div class="neon-footer-inner">
-          <a href="/" class="footer-brand-neon">
-            <span class="brand-logo-box neon-logo-box"><span class="brand-initials"><?= e($ini) ?></span></span>
-            <span class="footer-brand-text">
-              <span class="footer-brand-name"><?= e($site['name'] ?? 'Portfolio') ?></span>
-              <span class="footer-brand-role"><?= e($site['role'] ?? 'Software & Web Developer') ?></span>
-            </span>
-          </a>
-          <nav class="footer-nav-neon" aria-label="Footer Navigation">
-            <a href="/">Home</a><a href="/about">About</a><a href="/services">Services</a><a href="/projects">Projects</a><a href="/blog">Blog</a><a href="/contact">Contact</a>
-          </nav>
-          <div class="footer-socials-neon">
-            <?php $gh = trim((string)($site['github_url'] ?? '')); $li = trim((string)($site['linkedin_url'] ?? '')); $em = trim((string)($site['email'] ?? '')); ?>
-            <a href="<?= e($gh ?: '#') ?>" class="social-orb social-orb-sm" aria-label="GitHub" <?= $gh ? 'target="_blank" rel="noopener noreferrer"' : '' ?>><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
-            <a href="<?= e($li ?: '#') ?>" class="social-orb social-orb-sm" aria-label="LinkedIn" <?= $li ? 'target="_blank" rel="noopener noreferrer"' : '' ?>><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-            <a href="<?= e($em ? 'mailto:'.$em : '#') ?>" class="social-orb social-orb-sm" aria-label="Email"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
-          </div>
-        </div>
-        <div class="neon-footer-bottom">
-          <span><?= e($site['copyright'] ?? ('© ' . date('Y') . ' ' . ($site['name'] ?? 'Portfolio') . '. All rights reserved.')) ?></span>
-          <span class="footer-built">Built with <span class="heart">♥</span> for a better web.</span>
+      <!-- ==================== BOTTOM FOOTER STRIP ==================== -->
+      <footer class="glass-footer-strip" id="siteFooter">
+        <a href="/" class="footer-brand" style="text-decoration:none;">
+          <span class="footer-logo-box">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" aria-hidden="true">
+              <path d="M16 5.2L6.5 25.8H11.5L16 15.4L20.5 25.8H25.5L16 5.2Z" fill="#22d3ee" stroke="#22d3ee" stroke-width="0.8" stroke-linejoin="round"/>
+              <polygon points="16,19.6 13.7,24.6 18.3,24.6" fill="#22d3ee"/>
+            </svg>
+          </span>
+          <span class="footer-brand-name"><?= e($site['name'] ?? 'Jordan Lee') ?></span>
+        </a>
+
+        <span class="footer-copyright"><?= e($site['copyright'] ?? ('© ' . date('Y') . ' ' . ($site['name'] ?? 'Jordan Lee') . '. All rights reserved.')) ?></span>
+
+        <div class="footer-subpage-links" aria-label="Footer Quick Links">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/services">Services</a>
+          <a href="/projects">Projects</a>
+          <a href="/blog">Blog</a>
+          <a href="/contact">Contact</a>
         </div>
       </footer>
     </div>
   </div>
 
+  <!-- Interactive Live Project Preview Modal (Frosted Glass Browser Frame) -->
   <div class="glass-modal-backdrop" id="previewModal" hidden>
     <div class="glass-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="previewModalTitle">
       <div class="modal-browser-bar">
-        <div class="browser-dots" aria-hidden="true"><span class="b-dot dot-red"></span><span class="b-dot dot-amber"></span><span class="b-dot dot-green"></span></div>
+        <div class="browser-dots" aria-hidden="true">
+          <span class="b-dot dot-red"></span>
+          <span class="b-dot dot-amber"></span>
+          <span class="b-dot dot-green"></span>
+        </div>
         <div class="browser-url-pill" id="previewModalUrl">https://demo.local</div>
         <button type="button" class="modal-close-btn" id="closePreviewModal" aria-label="Close live preview">✕</button>
       </div>
       <div class="modal-body-content" id="previewModalBody"></div>
     </div>
   </div>
+
+  <!-- Toast Notification -->
   <div class="glass-toast" id="glassToast" role="status" aria-live="polite"></div>
+
   <script src="/ui.js?v=18"></script>
 </body>
 </html>

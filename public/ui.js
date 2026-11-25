@@ -583,19 +583,17 @@ document.addEventListener('DOMContentLoaded', () => {
       let offset = 0;
       const render = () => {
         if (!items.length) return;
-        const cards = testGrid.querySelectorAll('.testimonial-card, .testimonial-neon-card');
+        const cards = testGrid.querySelectorAll('.testimonial-card');
         cards.forEach((card, i) => {
           const item = items[(i + offset + items.length) % items.length];
-          const text = card.querySelector('.testimonial-text, .testimonial-neon-text');
-          const name = card.querySelector('.client-name, .testimonial-neon-name');
-          const role = card.querySelector('.client-role, .testimonial-neon-role');
-          const img = card.querySelector('.client-avatar, .testimonial-neon-avatar');
-          if (text) text.textContent = item.quote_text;
-          if (name) name.textContent = item.client_name;
-          if (role) role.textContent = item.client_role;
-          if (img) { img.src = item.avatar_path; img.alt = item.client_name; }
+          card.querySelector('.testimonial-text').textContent = item.quote_text;
+          card.querySelector('.client-name').textContent = item.client_name;
+          card.querySelector('.client-role').textContent = item.client_role;
+          const img = card.querySelector('.client-avatar');
+          img.src = item.avatar_path;
+          img.alt = item.client_name;
           const path = card.querySelector('.quote-glyph path');
-          if (path) path.setAttribute('fill', item.quote_color || '#f97316');
+          if (path) path.setAttribute('fill', item.quote_color || '#b4aaf8');
         });
       };
       prevBtn.addEventListener('click', () => {
