@@ -19,7 +19,7 @@ $pageTitle = $pageTitle ?? (($site['name'] ?? 'Jordan Lee') . ' — ' . ($site['
   <?php if (!$isSubpage): ?>
     <link rel="preload" as="image" href="<?= e(optimized_image_path((string)($site['portrait_path'] ?? '/assets/profile-cutout.png'))) ?>" fetchpriority="high" />
   <?php endif; ?>
-  <link rel="stylesheet" href="/styles.css?v=17" />
+  <link rel="stylesheet" href="/styles.css?v=16" />
 </head>
 <body<?= $isSubpage ? ' class="is-subpage"' : '' ?>>
   <div class="page-preloader" id="pagePreloader" role="status" aria-live="polite" aria-hidden="true">
@@ -40,13 +40,11 @@ $pageTitle = $pageTitle ?? (($site['name'] ?? 'Jordan Lee') . ' — ' . ($site['
       <!-- ==================== 1. NAVBAR ==================== -->
       <header class="glass-nav" id="navbar">
         <a href="/" class="brand" aria-label="<?= e($site['name'] ?? 'Home') ?>">
-          <span class="brand-logo-box neon-logo-box">
-            <span class="brand-initials"><?php
-              $nm = trim((string)($site['name'] ?? 'Portfolio'));
-              $parts = preg_split('/\s+/', $nm);
-              $ini = strtoupper(substr($parts[0] ?? 'P', 0, 1) . substr($parts[1] ?? ($parts[0] ?? 'P'), 0, 1));
-              echo e($ini);
-            ?></span>
+          <span class="brand-logo-box">
+            <svg viewBox="0 0 32 32" width="28" height="28" fill="none" aria-hidden="true">
+              <path d="M16 4.5L5.8 26.2H11.3L16 15.2L20.7 26.2H26.2L16 4.5Z" fill="#0b0d17" stroke="#0b0d17" stroke-width="1" stroke-linejoin="round"/>
+              <polygon points="16,19.4 13.4,25.0 18.6,25.0" fill="#0b0d17"/>
+            </svg>
           </span>
           <span class="brand-text">
             <span class="brand-name"><?= e($site['name'] ?? 'Jordan Lee') ?></span>
@@ -60,7 +58,7 @@ $pageTitle = $pageTitle ?? (($site['name'] ?? 'Jordan Lee') . ' — ' . ($site['
               'home' => ['label' => 'Home', 'href' => '/'],
               'about' => ['label' => 'About', 'href' => '/about'],
               'services' => ['label' => 'Services', 'href' => '/services'],
-              'projects' => ['label' => 'Projects', 'href' => '/projects'],
+              'projects' => ['label' => 'Work', 'href' => '/projects'],
               'blog' => ['label' => 'Blog', 'href' => '/blog'],
               'contact' => ['label' => 'Contact', 'href' => '/contact'],
           ];
