@@ -1,5 +1,5 @@
 -- ============================================================================
--- Aarav Singh — Software & Web Developer PHP Portfolio & CMS
+-- Developer Portfolio & CMS
 -- MySQL / MariaDB Schema Dump (UTF8MB4) — Matches includes/db.php 100%
 -- Note: On first page load, includes/db.php also auto-creates & seeds all
 -- tables automatically when DB_DRIVER is set to 'mysql' in includes/config.php.

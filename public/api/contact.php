@@ -56,7 +56,7 @@ save_contact_message([
     'message' => $message,
 ]);
 
-$ownerName = explode(' ', trim($site['name'] ?? 'Aarav'))[0] ?: 'Aarav';
+$ownerName = explode(' ', trim($site['name'] ?? 'Jordan'))[0] ?: 'there';
 $msg = "Thank you! {$ownerName} has received your message and will respond within 24 hours.";
 
 if ($wantsJson) {

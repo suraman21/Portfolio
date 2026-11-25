@@ -11,7 +11,7 @@ $techItems = get_tech_items(true);
 
 $activeNav = 'about';
 $isSubpage = true;
-$pageTitle = 'About — ' . ($site['name'] ?? 'Aarav Singh');
+$pageTitle = 'About — ' . ($site['name'] ?? 'Jordan Lee');
 
 $extendedParas = array_values(array_filter(array_map('trim', preg_split('/\R{2,}/', (string)($site['extended_bio'] ?? '')) ?: [])));
 
@@ -43,9 +43,9 @@ require dirname(__DIR__) . '/includes/header.php';
         <section class="glass-panel subpage-section-panel">
           <div class="about-detail-grid">
             <div class="about-portrait-card">
-              <img src="<?= e(optimized_image_path((string)($site['portrait_path'] ?? '/assets/aarav-cutout.png'))) ?>" alt="<?= e($site['name'] ?? 'Aarav Singh') ?>" loading="eager" fetchpriority="high" decoding="async" />
+              <img src="<?= e(optimized_image_path((string)($site['portrait_path'] ?? '/assets/profile-cutout.png'))) ?>" alt="<?= e($site['name'] ?? 'Jordan Lee') ?>" loading="eager" fetchpriority="high" decoding="async" />
               <div style="margin-top:14px;width:100%;">
-                <div style="font-size:17px;font-weight:700;color:#111422;"><?= e($site['name'] ?? 'Aarav Singh') ?></div>
+                <div style="font-size:17px;font-weight:700;color:#111422;"><?= e($site['name'] ?? 'Jordan Lee') ?></div>
                 <div style="font-size:12.5px;color:#595d6f;margin-top:2px;"><?= e($site['role'] ?? 'Software & Web Developer') ?></div>
                 <div class="dev-pill-row" style="margin-top:12px;">
                   <?php foreach (array_slice($techItems, 0, 4) as $t): ?>

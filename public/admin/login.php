@@ -28,7 +28,7 @@ $site = get_site_settings();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Sign In — <?= e($site['name'] ?? 'Aarav Singh') ?></title>
+  <title>Admin Sign In — <?= e($site['name'] ?? 'Jordan Lee') ?></title>
   <link rel="stylesheet" href="/admin.css" />
 </head>
 <body>
@@ -42,7 +42,7 @@ $site = get_site_settings();
           </svg>
         </div>
         <div>
-          <div style="font-size:17px;font-weight:750;color:#111424;"><?= e($site['name'] ?? 'Aarav Singh') ?></div>
+          <div style="font-size:17px;font-weight:750;color:#111424;"><?= e($site['name'] ?? 'Jordan Lee') ?></div>
           <div style="font-size:12px;color:#6d7288;">Portfolio CMS Admin Sign In</div>
         </div>
       </div>
@@ -69,7 +69,7 @@ $site = get_site_settings();
       </form>
 
       <div style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(190,194,222,0.5);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#686d84;">
-        <a href="/" style="font-weight:600;color:#5c53db;text-decoration:none;">← Back to Site</a>
+        <a href="/" style="font-weight:600;color:#0284c7;text-decoration:none;">← Back to Site</a>
       </div>
     </div>
   </div>

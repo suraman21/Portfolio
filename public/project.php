@@ -29,7 +29,7 @@ $nextProj = ($proj && count($allProjects) > 1)
 
 $activeNav = 'projects';
 $isSubpage = true;
-$pageTitle = ($proj ? $proj['title'] : 'Project Not Found') . ' — ' . ($site['name'] ?? 'Aarav Singh');
+$pageTitle = ($proj ? $proj['title'] : 'Project Not Found') . ' — ' . ($site['name'] ?? 'Jordan Lee');
 
 require dirname(__DIR__) . '/includes/header.php';
 ?>

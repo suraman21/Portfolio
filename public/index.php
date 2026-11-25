@@ -15,7 +15,7 @@ $testimonials = get_testimonials(true);
 
 $activeNav = 'home';
 $isSubpage = false;
-$pageTitle = ($site['name'] ?? 'Aarav Singh') . ' — ' . ($site['role'] ?? 'Software & Web Developer');
+$pageTitle = ($site['name'] ?? 'Jordan Lee') . ' — ' . ($site['role'] ?? 'Software & Web Developer');
 
 require dirname(__DIR__) . '/includes/header.php';
 ?>
@@ -26,7 +26,7 @@ require dirname(__DIR__) . '/includes/header.php';
         <!-- Left Content -->
         <div class="hero-left">
           <span class="eyebrow hero-eyebrow"><?= e($site['eyebrow'] ?? "HELLO, I'M") ?></span>
-          <h1 class="hero-title"><?= e($site['name'] ?? 'Aarav Singh') ?></h1>
+          <h1 class="hero-title"><?= e($site['name'] ?? 'Jordan Lee') ?></h1>
           <h2 class="hero-subtitle"><?= e($site['role'] ?? 'Software & Web Developer') ?></h2>
           <p class="hero-desc">
             <?= nl2br(e($site['tagline'] ?? "I engineer scalable web applications and modern software\nthat are fast, intuitive and built with precision.")) ?>
@@ -90,7 +90,7 @@ require dirname(__DIR__) . '/includes/header.php';
             <path d="M 128,90 L 446,90 C 494,90 514,134 488,214 C 463,291 418,352 376,422 C 332,495 284,546 230,575 L 28,575 C 8,575 0,559 4,533 L 56,162 C 63,116 88,90 128,90 Z" fill="url(#frameFillGrad)" stroke="url(#frameRimGrad)" stroke-width="2.6"/>
             <path d="M 130,95 L 443,95 C 488,95 507,137 482,214 C 458,289 413,350 372,419 C 328,491 281,541 228,570 L 32,570 C 14,570 7,555 10,531 L 61,164 C 68,120 91,95 130,95 Z" fill="none" stroke="rgba(255,255,255,0.42)" stroke-width="1.2"/>
             <g clip-path="url(#portraitSCurveClip)">
-              <image href="<?= e(optimized_image_path((string)($site['portrait_path'] ?? '/assets/aarav-cutout.png'))) ?>" x="18" y="-6" width="484" height="590" preserveAspectRatio="xMidYMid meet"/>
+              <image href="<?= e(optimized_image_path((string)($site['portrait_path'] ?? '/assets/profile-cutout.png'))) ?>" x="18" y="-6" width="484" height="590" preserveAspectRatio="xMidYMid meet"/>
             </g>
             <path d="M 488,214 C 463,291 418,352 376,422 C 332,495 284,546 230,575 L 28,575 C 8,575 0,559 4,533" fill="none" stroke="rgba(255,255,255,0.88)" stroke-width="2.4" stroke-linecap="round"/>
           </svg>
@@ -105,16 +105,16 @@ require dirname(__DIR__) . '/includes/header.php';
                   <stop offset="100%" stop-color="#ffffff" stop-opacity="0.9"/>
                 </radialGradient>
                 <linearGradient id="sparkleGrad" x1="26" y1="28" x2="62" y2="64" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#9ca8fb"/>
+                  <stop offset="0%" stop-color="#67e8f9"/>
                   <stop offset="55%" stop-color="#8b7ef6"/>
-                  <stop offset="100%" stop-color="#a58bf8"/>
+                  <stop offset="100%" stop-color="#38bdf8"/>
                 </linearGradient>
               </defs>
               <circle cx="46" cy="46" r="42" fill="url(#orbGlassBg)" stroke="rgba(255,255,255,0.92)" stroke-width="1.8"/>
               <path d="M22 25C30 15 48 12 63 18" stroke="rgba(255,255,255,0.95)" stroke-width="3" stroke-linecap="round"/>
               <path d="M72 30C77 40 77 54 70 65" stroke="rgba(255,255,255,0.85)" stroke-width="2.4" stroke-linecap="round"/>
               <path d="M43 29C44.1 38.2 46.8 40.9 56 42C46.8 43.1 44.1 45.8 43 55C41.9 45.8 39.2 43.1 30 42C39.2 40.9 41.9 38.2 43 29Z" fill="url(#sparkleGrad)"/>
-              <path d="M56.5 30C57.1 34.1 58.4 35.4 62.5 36C58.4 36.6 57.1 37.9 56.5 42C55.9 37.9 54.6 36.6 50.5 36C54.6 35.4 55.9 34.1 56.5 30Z" fill="#959bf9" opacity="0.85"/>
+              <path d="M56.5 30C57.1 34.1 58.4 35.4 62.5 36C58.4 36.6 57.1 37.9 56.5 42C55.9 37.9 54.6 36.6 50.5 36C54.6 35.4 55.9 34.1 56.5 30Z" fill="#38bdf8" opacity="0.85"/>
             </svg>
           </div>
 
@@ -130,13 +130,13 @@ require dirname(__DIR__) . '/includes/header.php';
             <svg class="impact-chart" viewBox="0 0 180 54" fill="none" aria-hidden="true">
               <defs>
                 <linearGradient id="impactArea" x1="90" y1="6" x2="90" y2="52" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#8b82f6" stop-opacity="0.22"/>
-                  <stop offset="100%" stop-color="#8b82f6" stop-opacity="0"/>
+                  <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.22"/>
+                  <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
                 </linearGradient>
               </defs>
               <path d="M6 46 C 22 41, 32 35, 48 37 C 64 39, 76 28, 92 31 C 106 34, 118 22, 134 26 C 148 29, 160 15, 173 7 L 173 52 L 6 52 Z" fill="url(#impactArea)"/>
-              <path d="M6 46 C 22 41, 32 35, 48 37 C 64 39, 76 28, 92 31 C 106 34, 118 22, 134 26 C 148 29, 160 15, 173 7" stroke="#8a82f5" stroke-width="2.3" stroke-linecap="round"/>
-              <circle cx="173" cy="7" r="2.3" fill="#8a82f5"/>
+              <path d="M6 46 C 22 41, 32 35, 48 37 C 64 39, 76 28, 92 31 C 106 34, 118 22, 134 26 C 148 29, 160 15, 173 7" stroke="#0ea5e9" stroke-width="2.3" stroke-linecap="round"/>
+              <circle cx="173" cy="7" r="2.3" fill="#0ea5e9"/>
             </svg>
           </div>
         </div>
@@ -329,7 +329,7 @@ require dirname(__DIR__) . '/includes/header.php';
               <article class="testimonial-card">
                 <span class="quote-glyph" aria-hidden="true">
                   <svg viewBox="0 0 24 18" width="19" height="15" fill="none">
-                    <path d="M5.6 17C2.6 17 1 14.8 1 11.7C1 7.6 3.7 3.6 8.2 1.2L9.6 3.2C6.5 5 5.1 7.2 4.9 9.5C5.4 9.2 6.1 9.1 6.8 9.1C8.9 9.1 10.4 10.6 10.4 12.9C10.4 15.3 8.5 17 5.6 17ZM17.8 17C14.8 17 13.2 14.8 13.2 11.7C13.2 7.6 15.9 3.6 20.4 1.2L21.8 3.2C18.7 5 17.3 7.2 17.1 9.5C17.6 9.2 18.3 9.1 19 9.1C21.1 9.1 22.6 10.6 22.6 12.9C22.6 15.3 20.7 17 17.8 17Z" fill="<?= e($tm['quote_color'] ?: '#b4aaf8') ?>"/>
+                    <path d="M5.6 17C2.6 17 1 14.8 1 11.7C1 7.6 3.7 3.6 8.2 1.2L9.6 3.2C6.5 5 5.1 7.2 4.9 9.5C5.4 9.2 6.1 9.1 6.8 9.1C8.9 9.1 10.4 10.6 10.4 12.9C10.4 15.3 8.5 17 5.6 17ZM17.8 17C14.8 17 13.2 14.8 13.2 11.7C13.2 7.6 15.9 3.6 20.4 1.2L21.8 3.2C18.7 5 17.3 7.2 17.1 9.5C17.6 9.2 18.3 9.1 19 9.1C21.1 9.1 22.6 10.6 22.6 12.9C22.6 15.3 20.7 17 17.8 17Z" fill="<?= e($tm['quote_color'] ?: '#67e8f9') ?>"/>
                   </svg>
                 </span>
                 <p class="testimonial-text"><?= e($tm['quote_text']) ?></p>
@@ -378,7 +378,7 @@ require dirname(__DIR__) . '/includes/header.php';
                   <path d="M2.8 4.8L9 9.4L15.2 4.8" stroke="#3c3f52" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </span>
-              <a href="mailto:<?= e($site['email'] ?? 'hello@aaravsingh.dev') ?>"><?= e($site['email'] ?? 'hello@aaravsingh.dev') ?></a>
+              <a href="mailto:<?= e($site['email'] ?? 'hello@example.com') ?>"><?= e($site['email'] ?? 'hello@example.com') ?></a>
             </li>
             <li>
               <span class="contact-icon-circle">

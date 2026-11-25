@@ -32,7 +32,7 @@ $edu = get_experiences_by_type('education');
 $projects = get_projects(true, false);
 $techs = get_tech_items(true);
 
-$name = $site['name'] ?? 'Aarav Singh';
+$name = $site['name'] ?? 'Jordan Lee';
 $role = $site['role'] ?? 'Software & Web Developer';
 $filename = slugify($name) . '-developer-resume.txt';
 

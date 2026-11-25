@@ -21,7 +21,7 @@ foreach ($projects as $p) {
 
 $activeNav = 'projects';
 $isSubpage = true;
-$pageTitle = 'Projects — ' . ($site['name'] ?? 'Aarav Singh');
+$pageTitle = 'Projects — ' . ($site['name'] ?? 'Jordan Lee');
 
 require dirname(__DIR__) . '/includes/header.php';
 ?>

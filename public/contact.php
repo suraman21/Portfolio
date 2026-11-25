@@ -14,7 +14,7 @@ $statusParam = (string)($_GET['status'] ?? '');
 
 $activeNav = 'contact';
 $isSubpage = true;
-$pageTitle = 'Contact — ' . ($site['name'] ?? 'Aarav Singh');
+$pageTitle = 'Contact — ' . ($site['name'] ?? 'Jordan Lee');
 
 require dirname(__DIR__) . '/includes/header.php';
 ?>
@@ -34,7 +34,7 @@ require dirname(__DIR__) . '/includes/header.php';
 
         <?php if ($statusParam === 'sent'): ?>
           <div class="glass-panel" style="padding:18px 24px;color:#166534;font-weight:600;border-color:#86efac;">
-            ✓ Thank you! Your message has been saved and Aarav will respond within 24 hours.
+            ✓ Thank you! Your message has been saved. We will respond within 24 hours.
           </div>
         <?php elseif ($statusParam === 'invalid'): ?>
           <div class="glass-panel" style="padding:18px 24px;color:#991b1b;font-weight:600;border-color:#fca5a5;">
@@ -53,7 +53,7 @@ require dirname(__DIR__) . '/includes/header.php';
                 <span class="contact-icon-circle">✉</span>
                 <div>
                   <div class="channel-label">Direct Email</div>
-                  <div class="channel-val"><a href="mailto:<?= e($site['email'] ?? 'hello@aaravsingh.dev') ?>"><?= e($site['email'] ?? 'hello@aaravsingh.dev') ?></a></div>
+                  <div class="channel-val"><a href="mailto:<?= e($site['email'] ?? 'hello@example.com') ?>"><?= e($site['email'] ?? 'hello@example.com') ?></a></div>
                 </div>
               </div>
 
@@ -70,9 +70,9 @@ require dirname(__DIR__) . '/includes/header.php';
                 <div>
                   <div class="channel-label">GitHub &amp; LinkedIn</div>
                   <div class="channel-val">
-                    <a href="<?= e($site['github_url'] ?? 'https://github.com/aaravsingh-dev') ?>" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="<?= e($site['github_url'] ?? 'https://github.com/jordanlee-dev') ?>" target="_blank" rel="noopener noreferrer">GitHub</a>
                     &nbsp;·&nbsp;
-                    <a href="<?= e($site['linkedin_url'] ?? 'https://linkedin.com/in/aaravsingh-dev') ?>" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="<?= e($site['linkedin_url'] ?? 'https://linkedin.com/in/jordanlee-dev') ?>" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </div>
                 </div>
               </div>
