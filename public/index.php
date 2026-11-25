@@ -202,34 +202,44 @@ require dirname(__DIR__) . '/includes/header.php';
       </section>
 
       <!-- ==================== 4. SERVICES SECTION ==================== -->
-      <div class="services-outer-wrap" id="services">
-        <img src="<?= e(optimized_image_path('/assets/services-sphere-cutout.png')) ?>" alt="" aria-hidden="true" class="services-glass-sphere" loading="lazy" decoding="async" />
-        <div class="services-caustic-tint" aria-hidden="true"></div>
-
-        <section class="glass-panel services-panel">
-          <div class="section-header">
+      <section class="glass-panel services-panel" id="services">
+        <div class="services-header-row">
+          <div class="section-header" style="margin-bottom:0;">
             <span class="eyebrow">WHAT I DO</span>
             <h2 class="section-title">Services I Offer</h2>
+            <p class="section-subtext">End-to-end engineering services designed to ship reliable, scalable, and polished digital products.</p>
           </div>
+          <a href="/services" class="btn-glass-pill btn-sm-pill services-all-btn">
+            <span>Explore All Services</span>
+            <svg viewBox="0 0 14 14" width="12" height="12" fill="none" aria-hidden="true">
+              <path d="M3.5 10.5L10.5 3.5M10.5 3.5H4.8M10.5 3.5V9.2" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
 
-          <div class="services-grid">
-            <?php foreach ($services as $idx => $srv): ?>
-              <article class="service-card service-card-zigzag-<?= $idx % 2 === 0 ? 'left' : 'right' ?> clickable-card" data-href="/services#<?= e($srv['slug']) ?>">
+        <div class="services-grid">
+          <?php foreach ($services as $idx => $srv): ?>
+            <article class="service-card clickable-card" data-href="/services#<?= e($srv['slug']) ?>">
+              <div class="service-card-top">
                 <div class="service-icon-tile <?= e($srv['tile_class']) ?>">
                   <?= render_service_svg((string)$srv['icon_key'], (string)$srv['tile_class']) ?>
                 </div>
-                <h3 class="service-title"><?= e($srv['title']) ?></h3>
-                <p class="service-desc"><?= e($srv['short_desc']) ?></p>
-                <a href="/services#<?= e($srv['slug']) ?>" class="card-corner-arrow" aria-label="View <?= e($srv['title']) ?> details">
-                  <svg viewBox="0 0 14 14" width="13" height="13" fill="none">
+                <span class="service-card-index">0<?= $idx + 1 ?></span>
+              </div>
+              <h3 class="service-title"><?= e($srv['title']) ?></h3>
+              <p class="service-desc"><?= e($srv['short_desc']) ?></p>
+              <div class="service-card-foot">
+                <a href="/services#<?= e($srv['slug']) ?>" class="service-link-inline" aria-label="View <?= e($srv['title']) ?> details">
+                  <span>Learn more</span>
+                  <svg viewBox="0 0 14 14" width="12" height="12" fill="none" aria-hidden="true">
                     <path d="M3.5 10.5L10.5 3.5M10.5 3.5H4.8M10.5 3.5V9.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </a>
-              </article>
-            <?php endforeach; ?>
-          </div>
-        </section>
-      </div>
+              </div>
+            </article>
+          <?php endforeach; ?>
+        </div>
+      </section>
 
       <!-- ==================== 5. TECHNOLOGIES I USE ==================== -->
       <section class="glass-panel tech-panel" id="skills">
@@ -291,21 +301,24 @@ require dirname(__DIR__) . '/includes/header.php';
 
       <!-- ==================== 7. ENGINEERING PROCESS ==================== -->
       <section class="glass-panel process-panel" id="process">
-        <div class="section-header">
-          <span class="eyebrow">MY PROCESS</span>
-          <h2 class="section-title">Engineering Process I Follow</h2>
+        <div class="process-header-row">
+          <div class="section-header" style="margin-bottom:0;">
+            <span class="eyebrow">MY PROCESS</span>
+            <h2 class="section-title">A Clear Process, From Idea to Launch</h2>
+            <p class="section-subtext">A structured workflow that keeps delivery transparent, efficient, and focused on quality outcomes.</p>
+          </div>
         </div>
 
         <div class="process-grid">
           <?php foreach ($processSteps as $idx => $step):
               $isHighlight = ((int)$step['is_highlighted'] === 1);
           ?>
-            <article class="process-card process-card-zigzag-<?= $idx % 2 === 0 ? 'left' : 'right' ?><?= $isHighlight ? ' process-card-highlight' : '' ?>">
-              <div class="process-top">
+            <article class="process-card<?= $isHighlight ? ' process-card-highlight' : '' ?>">
+              <div class="process-card-head">
+                <span class="process-num<?= $isHighlight ? ' process-num-active' : '' ?>"><?= e($step['step_number']) ?></span>
                 <div class="process-orb-icon<?= $isHighlight ? ' orb-glow' : '' ?>">
                   <?= render_process_svg((string)$step['icon_key']) ?>
                 </div>
-                <span class="process-num<?= $isHighlight ? ' process-num-active' : '' ?>"><?= e($step['step_number']) ?></span>
               </div>
               <div class="process-body">
                 <h3 class="process-title"><?= e($step['title']) ?></h3>

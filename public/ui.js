@@ -737,27 +737,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-
-  // Theme toggle (dark / light)
-  const themeToggleBtn = document.getElementById('themeToggleBtn');
-  function applyTheme(theme, persist) {
-    const next = theme === 'dark' ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', next);
-    if (persist) {
-      try { localStorage.setItem('portfolio-theme', next); } catch (e) {}
-    }
-    if (themeToggleBtn) {
-      const isDark = next === 'dark';
-      themeToggleBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-      themeToggleBtn.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-    }
-  }
-  applyTheme(document.documentElement.getAttribute('data-theme') || 'light', false);
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-      applyTheme(current === 'dark' ? 'light' : 'dark', true);
-    });
-  }
 });
