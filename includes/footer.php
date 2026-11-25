@@ -7,14 +7,14 @@ $site = $site ?? get_site_settings();
         <a href="/" class="footer-brand" style="text-decoration:none;">
           <span class="footer-logo-box">
             <svg viewBox="0 0 32 32" width="22" height="22" fill="none" aria-hidden="true">
-              <path d="M16 5.2L6.5 25.8H11.5L16 15.4L20.5 25.8H25.5L16 5.2Z" fill="#a294f8" stroke="#a294f8" stroke-width="0.8" stroke-linejoin="round"/>
-              <polygon points="16,19.6 13.7,24.6 18.3,24.6" fill="#a294f8"/>
+              <path d="M16 5.2L6.5 25.8H11.5L16 15.4L20.5 25.8H25.5L16 5.2Z" fill="#22d3ee" stroke="#22d3ee" stroke-width="0.8" stroke-linejoin="round"/>
+              <polygon points="16,19.6 13.7,24.6 18.3,24.6" fill="#22d3ee"/>
             </svg>
           </span>
-          <span class="footer-brand-name"><?= e($site['name'] ?? 'Aarav Singh') ?></span>
+          <span class="footer-brand-name"><?= e($site['name'] ?? 'Jordan Lee') ?></span>
         </a>
 
-        <span class="footer-copyright"><?= e($site['copyright'] ?? ('© ' . date('Y') . ' ' . ($site['name'] ?? 'Aarav Singh') . '. All rights reserved.')) ?></span>
+        <span class="footer-copyright"><?= e($site['copyright'] ?? ('© ' . date('Y') . ' ' . ($site['name'] ?? 'Jordan Lee') . '. All rights reserved.')) ?></span>
 
         <div class="footer-subpage-links" aria-label="Footer Quick Links">
           <a href="/">Home</a>
@@ -47,6 +47,6 @@ $site = $site ?? get_site_settings();
   <!-- Toast Notification -->
   <div class="glass-toast" id="glassToast" role="status" aria-live="polite"></div>
 
-  <script src="/ui.js?v=17"></script>
+  <script src="/ui.js?v=18"></script>
 </body>
 </html>

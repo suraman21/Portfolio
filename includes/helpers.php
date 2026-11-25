@@ -396,7 +396,7 @@ function render_tech_tile_icon(string $iconKey, string $name): array
                 'mongodb' => '#00684a', 'mysql' => '#00758f', 'redis' => '#a41e11',
                 'sqlite' => '#176099', 'tailwind' => '#06b6d4', 'vue' => '#42b883',
                 'vite' => '#646cff', 'playwright' => '#2ead33',
-            ][$iconKey] ?? '#5c54d6') . ';',
+            ][$iconKey] ?? '#0369a1') . ';',
             'svg' => '<svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><text x="16" y="21" text-anchor="middle" font-family="Inter, sans-serif" font-size="' . (strlen($label = strtoupper(substr($name, 0, in_array($iconKey, ['aws', 'css', 'html', 'php'], true) ? 3 : 2))) > 2 ? '10' : '13') . '" font-weight="800" fill="#ffffff">' . e($label) . '</text></svg>',
         ],
     };
@@ -405,10 +405,10 @@ function render_tech_tile_icon(string $iconKey, string $name): array
 function render_process_svg(string $iconKey): string
 {
     return match ($iconKey) {
-        'arch' => '<svg viewBox="0 0 22 22" width="18" height="18" fill="none" aria-hidden="true"><circle cx="8" cy="7.5" r="2.2" stroke="#5b54b2" stroke-width="1.6"/><circle cx="14" cy="7.5" r="2.2" stroke="#7c73ec" stroke-width="1.6"/><circle cx="8" cy="14.2" r="2.2" stroke="#5b54b2" stroke-width="1.6"/><path d="M12.2 12.4L16.2 16.4M15.8 12.4L12.2 16" stroke="#535076" stroke-width="1.6" stroke-linecap="round"/></svg>',
-        'proto' => '<svg viewBox="0 0 22 22" width="18" height="18" fill="none" aria-hidden="true"><circle cx="7.6" cy="7.6" r="2" stroke="#687ce4" stroke-width="1.6"/><circle cx="14.4" cy="14.4" r="2" stroke="#687ce4" stroke-width="1.6"/><path d="M13 6.2L15.8 9M6.2 13L9 15.8M9.3 9.3L12.7 12.7" stroke="#7c73ec" stroke-width="1.6" stroke-linecap="round"/></svg>',
-        'frontend' => '<svg viewBox="0 0 22 22" width="18" height="18" fill="none" aria-hidden="true"><path d="M8.5 7.5L5.2 11L8.5 14.5M13.5 7.5L16.8 11L13.5 14.5" stroke="#636fd8" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-        'backend' => '<svg viewBox="0 0 22 22" width="18" height="18" fill="none" aria-hidden="true"><rect x="5.5" y="5.8" width="11" height="4.2" rx="1.2" fill="#7c73f0"/><rect x="5.5" y="12" width="11" height="4.2" rx="1.2" stroke="#5aa9e6" stroke-width="1.5"/></svg>',
+        'arch' => '<svg viewBox="0 0 22 22" width="18" height="18" fill="none" aria-hidden="true"><circle cx="8" cy="7.5" r="2.2" stroke="#0369a1" stroke-width="1.6"/><circle cx="14" cy="7.5" r="2.2" stroke="#06b6d4" stroke-width="1.6"/><circle cx="8" cy="14.2" r="2.2" stroke="#0369a1" stroke-width="1.6"/><path d="M12.2 12.4L16.2 16.4M15.8 12.4L12.2 16" stroke="#535076" stroke-width="1.6" stroke-linecap="round"/></svg>',
+        'proto' => '<svg viewBox="0 0 22 22" width="18" height="18" fill="none" aria-hidden="true"><circle cx="7.6" cy="7.6" r="2" stroke="#0ea5e9" stroke-width="1.6"/><circle cx="14.4" cy="14.4" r="2" stroke="#0ea5e9" stroke-width="1.6"/><path d="M13 6.2L15.8 9M6.2 13L9 15.8M9.3 9.3L12.7 12.7" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round"/></svg>',
+        'frontend' => '<svg viewBox="0 0 22 22" width="18" height="18" fill="none" aria-hidden="true"><path d="M8.5 7.5L5.2 11L8.5 14.5M13.5 7.5L16.8 11L13.5 14.5" stroke="#0284c7" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        'backend' => '<svg viewBox="0 0 22 22" width="18" height="18" fill="none" aria-hidden="true"><rect x="5.5" y="5.8" width="11" height="4.2" rx="1.2" fill="#0284c7"/><rect x="5.5" y="12" width="11" height="4.2" rx="1.2" stroke="#5aa9e6" stroke-width="1.5"/></svg>',
         default => '<svg viewBox="0 0 22 22" width="18" height="18" fill="none" aria-hidden="true"><rect x="5.4" y="5.4" width="4.6" height="4.6" rx="1.3" stroke="#535678" stroke-width="1.55"/><rect x="12" y="5.4" width="4.6" height="4.6" rx="1.3" stroke="#535678" stroke-width="1.55"/><rect x="5.4" y="12" width="4.6" height="4.6" rx="1.3" stroke="#535678" stroke-width="1.55"/><rect x="12" y="12" width="4.6" height="4.6" rx="1.3" stroke="#535678" stroke-width="1.55"/></svg>',
     };
 }

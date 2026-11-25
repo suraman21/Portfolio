@@ -14,7 +14,7 @@ if (!$post) {
 
 $activeNav = 'blog';
 $isSubpage = true;
-$pageTitle = ($post ? $post['title'] : 'Article Not Found') . ' — ' . ($site['name'] ?? 'Aarav Singh');
+$pageTitle = ($post ? $post['title'] : 'Article Not Found') . ' — ' . ($site['name'] ?? 'Jordan Lee');
 
 require dirname(__DIR__) . '/includes/header.php';
 ?>

@@ -9,7 +9,7 @@ $faqs = get_faqs();
 
 $activeNav = 'services';
 $isSubpage = true;
-$pageTitle = 'Services — ' . ($site['name'] ?? 'Aarav Singh');
+$pageTitle = 'Services — ' . ($site['name'] ?? 'Jordan Lee');
 
 require dirname(__DIR__) . '/includes/header.php';
 ?>

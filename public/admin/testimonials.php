@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'client_role' => trim((string)($_POST['client_role'] ?? '')),
             'quote_text' => $quoteText,
             'avatar_path' => $avatarPath,
-            'quote_color' => trim((string)($_POST['quote_color'] ?? '#b4aaf8')),
+            'quote_color' => trim((string)($_POST['quote_color'] ?? '#67e8f9')),
             'sort_order' => (int)($_POST['sort_order'] ?? 0),
             'is_active' => isset($_POST['is_active']) ? 1 : 0,
         ], $id);
@@ -71,7 +71,7 @@ require __DIR__ . '/_layout_top.php';
               'client_role' => '',
               'quote_text' => '',
               'avatar_path' => '/assets/avatar-rohit.png',
-              'quote_color' => '#b4aaf8',
+              'quote_color' => '#67e8f9',
               'sort_order' => count($testimonials) + 1,
               'is_active' => 1,
           ];
@@ -117,7 +117,7 @@ require __DIR__ . '/_layout_top.php';
 
             <div class="adm-field">
               <label class="adm-label">Quote Mark Accent Hex</label>
-              <input type="text" name="quote_color" class="adm-input" value="<?= e($tm['quote_color']) ?>" placeholder="#b4aaf8" />
+              <input type="text" name="quote_color" class="adm-input" value="<?= e($tm['quote_color']) ?>" placeholder="#67e8f9" />
             </div>
 
             <div class="adm-field">

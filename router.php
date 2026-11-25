@@ -106,7 +106,7 @@ $activeNav = '';
 $isSubpage = true;
 require_once __DIR__ . '/includes/repository.php';
 $site = get_site_settings();
-$pageTitle = '404 Not Found — ' . ($site['name'] ?? 'Aarav Singh');
+$pageTitle = '404 Not Found — ' . ($site['name'] ?? 'Jordan Lee');
 require __DIR__ . '/includes/header.php';
 ?>
       <div class="subpage-shell">

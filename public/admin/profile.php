@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        $portraitPath = trim((string)($_POST['existing_portrait'] ?? '/assets/aarav-cutout.png'));
+        $portraitPath = trim((string)($_POST['existing_portrait'] ?? '/assets/profile-cutout.png'));
         try {
             $resumePath = handle_cv_upload('resume_file');
             $uploaded = handle_image_upload('portrait_file', 'portrait');
@@ -152,7 +152,7 @@ require __DIR__ . '/_layout_top.php';
 
           <div class="adm-field">
             <label class="adm-label">Current Portrait Path</label>
-            <input type="text" name="existing_portrait" class="adm-input" value="<?= e($site['portrait_path'] ?? '/assets/aarav-cutout.png') ?>" />
+            <input type="text" name="existing_portrait" class="adm-input" value="<?= e($site['portrait_path'] ?? '/assets/profile-cutout.png') ?>" />
           </div>
 
           <div class="adm-field span-full">

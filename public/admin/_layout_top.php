@@ -33,7 +33,7 @@ $flash = get_flash();
           </svg>
         </span>
         <div>
-          <div class="sidebar-brand-title"><?= e($site['name'] ?? 'Aarav Singh') ?></div>
+          <div class="sidebar-brand-title"><?= e($site['name'] ?? 'Jordan Lee') ?></div>
           <div class="sidebar-brand-sub">PHP Portfolio CMS</div>
         </div>
       </a>

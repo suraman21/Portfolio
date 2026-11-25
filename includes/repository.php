@@ -380,7 +380,7 @@ function save_testimonial(array $data, ?int $id = null): int
             (string)($data['client_role'] ?? ''),
             (string)($data['quote_text'] ?? ''),
             (string)($data['avatar_path'] ?? '/assets/avatar-rohit.png'),
-            (string)($data['quote_color'] ?? '#b4aaf8'),
+            (string)($data['quote_color'] ?? '#67e8f9'),
             (int)($data['sort_order'] ?? 0),
             (int)($data['is_active'] ?? 1),
             $id,
@@ -397,7 +397,7 @@ function save_testimonial(array $data, ?int $id = null): int
         (string)($data['client_role'] ?? ''),
         (string)($data['quote_text'] ?? ''),
         (string)($data['avatar_path'] ?? '/assets/avatar-rohit.png'),
-        (string)($data['quote_color'] ?? '#b4aaf8'),
+        (string)($data['quote_color'] ?? '#67e8f9'),
         (int)($data['sort_order'] ?? 0),
         (int)($data['is_active'] ?? 1),
     ]);
